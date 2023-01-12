@@ -1,0 +1,106 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
+
+}
+.tete{
+	height: 100vh ;
+	width: 100%;
+	background-image: url(media/arriereAccueil.jpg) ;
+	background-size: cover;
+	background-position: center;
+}
+
+h2.logo {
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 40px;
+	
+	
+}
+
+#leI{
+color: rgb(100,0,0);
+
+}
+
+
+
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 45px;
+}
+
+nav ul li{
+	list-style-type: none ;
+	display: inline-block;
+	padding: 15px 15px;
+
+}
+
+nav ul li a{
+	font-weight: bold;
+	color: white;
+	text-decoration: none ;
+	
+}
+
+nav ul li a:hover{
+	color: black;
+	transition: .8s;
+
+
+}	
+
+#textPresentation{
+	position: absolute;
+	color: rgba(0, 0, 0, 1.0);
+	top: 35%;
+	left: 20%;
+	
+}
+
+#monNom{
+	font-weight: bold;
+	color:rgb(100,0,0);
+}
+
+#bienvenue{
+	position: relative;
+	
+	overflow: hidden;
+	animation: apparaitre 1s ease-out;
+
+}
+
+#bienvenue::before{
+	content: '';
+	position: absolute;
+	color: rgba(0, 0, 0, 0.0);
+	
+	
+}
+
+@keyframes apparaitre {
+	from {color: rgba(0, 0, 0, 0.0);
+		font-size: 0.0em};
+	to {color: rgba(60, 1, 0, 1.0);
+		font-size: 2.2em;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
