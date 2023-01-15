@@ -119,7 +119,7 @@ nav ul li a:hover{
 	transform: scale(1.5) translate(75%,-40%);	
 }
 .brique:nth-child(5):hover{
-	transform: scale(1.5) translate(0%,-25%);	
+	transform: scale(1.5) translate(-25%,-25%);	
 }
 .brique:nth-child(6):hover{
 	transform: scale(1.5) translate(-25%,-25%);	
