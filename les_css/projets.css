@@ -74,7 +74,7 @@ nav ul li a:hover{
 
 }	
 .blocProjet{
-	
+
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -86,7 +86,9 @@ nav ul li a:hover{
 	margin: auto;
 }
 
-.brique{
+ .brique{
+	
+ 
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -94,5 +96,56 @@ nav ul li a:hover{
 	width: 30%;
 	border-radius: 15px; 
 	box-shadow: -12px -12px 20px rgba(255,255,255,0.2), 12px 12px 20px rgba(0,0,0,0.4);
+	transition: all 2s ;
+	transform: scale(1.0) translate(0%,0%);
+}
+.brique:hover{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#brique1:nth-child(1):hover{
+	transform: scale(1.5) translate(50%,50%);	
+}
+
+.brique:nth-child(2):hover{
+	transform: scale(1.5) translate(0%,25%);	
+}
+.brique:nth-child(3):hover{
+	transform: scale(1.5) translate(-25%,25%);	
+}
+.brique:nth-child(4):hover{
+	transform: scale(1.5) translate(75%,-40%);	
+}
+.brique:nth-child(5):hover{
+	transform: scale(1.5) translate(0%,-25%);	
+}
+.brique:nth-child(6):hover{
+	transform: scale(1.5) translate(-25%,-25%);	
+}
+/*
+@keyframes monBloque{
+	from {
+		height: 40%;
+		width: 30%;
+		border-radius: 15px; 
+		box-shadow: -12px -12px 20px rgba(255,255,255,0.2), 12px 12px 20px rgba(0,0,0,0.4);
+	
+		
+	}
+
+	to {
+		
+		height: 60vh;
+		width: 80vw;
+		border-radius: 15px; 
+		box-shadow: -12px -12px 20px rgba(255,255,255,0.2), 12px 12px 20px rgba(0,0,0,0.4);
+		
+		
+		
+	}
+
 
 }
+*/
