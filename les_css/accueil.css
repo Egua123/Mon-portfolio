@@ -8,7 +8,7 @@
 
 body{
 	background-color: rgba(15, 65, 77, 0.3);
-	background-image: url(../media/arriereAccueil.jpg) ;
+	
 	background-size: cover;
 	background-position: center;
 	animation: transitPageEnPage 2s;
@@ -28,9 +28,15 @@ body{
 	}
 }
 
-.tete{
-	height: 100vh ;
+header{
+	position: absolute;
+	height: 8vh ;
 	width: 100%;
+	top: 0;
+	left: 0;
+	color: black;
+	background: rgba(0,0,0,0.2);
+	padding: 0 3em;
 }
 
 h2.logo {
@@ -46,12 +52,16 @@ color: rgb(100,0,0);
 
 }
 
-
+.toggle{
+	display: none;
+}
 nav{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	padding-top: 45px;
+	height: 100% ;
+	width: 100%;
 }
 
 nav ul li{
@@ -63,17 +73,22 @@ nav ul li{
 
 nav ul li a{
 	font-weight: bold;
-	color: white;
+	color: black;
 	text-decoration: none ;
 
 }
 
 nav ul li a:hover{
-	color: black;
+	color: white;
 	transition: .8s;
 
 
 }	
+
+.accueil{
+	height: 100vh;
+	background: ;
+}
 
 #textPresentation{
 	overflow: hidden;
@@ -128,7 +143,38 @@ nav ul li a:hover{
 }
 
 
+@media all and (max-width: 991px){
+	.toggle{
+		cursor: pointer;
+		display: block;
+		font-size:2rem;
+	}
+	.ouvert{
+		display:block;
 
+	}
+	.ferme{
+		display: none;
+
+	}
+	.open .ouvert{
+		display: none;
+	}
+	.open .ferme{
+		display: block;
+	}
+	
+	#menu{
+		position:absolute;
+		top: 0;
+		left: 0;
+		flex-direction:  column;
+		justify-content: space-around;
+		width: 100%;
+		height:100vh;
+
+	}
+}
 
 
 

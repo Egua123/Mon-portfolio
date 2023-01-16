@@ -6,11 +6,20 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 
+
+   <script src="https://kit.fontawesome.com/ad121f0985.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
-	<div class="tete">
+	<header>
 		<nav>
 			<h2 class="logo">moh<span id="leI">i</span>can</h2>
+			<div class="toggle">
+				<i class="fa-solid fa-bars ouvert"></i>
+				<i class="fa-regular fa-rectangle-xmark ferme"></i>
+				
+			</div>
 			<ul id="menu">
 				<li><a href="accueil.html">ACCUEIL</a></li>
 				<li><a href="a_propos.html">À PROPOS</a></li>
@@ -19,33 +28,40 @@
 			</ul>
 		</nav>
 		
-	</div>
+	</header>
 	<br>
-	<div id="textPresentation">
-		<h4 id="bienvenue"> Bienvenue, je m'appelle <span id="monNom">Mario Sekpona</span> </h4>
-		<h1 id = "statut"> je suis étudiant en informatique et passionné du développeur front-end</h1>
+	<section class="accueil">
+		<div id="textPresentation">
+			<h4 id="bienvenue"> Bienvenue, je m'appelle <span id="monNom">Mario Sekpona</span> </h4>
+			<h1 id = "statut"> je suis étudiant en informatique et passionné du développeur front-end</h1>
 
-	</div>
-	<div id="Apropos">
-		<div id="troisBlocks">
-			<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</div>
+		<div id="Apropos">
+			<div id="troisBlocks">
+				<div>
+				</div>
 
-			</div>
+				<div> 
+				  
+				</div>
 
-			<div> 
-			turies, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets    
-			</div>
-
-			<div>
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				<div>
+					
+				</div>
 			</div>
 		</div>
-	</div>
 
-
+	</section>
 
 
 
 
 </body>
 </html>
+<script type="text/javascript">
+	let toggle = document.querySelector('.toggle');
+	let body = document.querySelector('body');
+	toggle.addEventListener('click', function(){
+		body.classList.toggle('open');
+	})
+</script>
