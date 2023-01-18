@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Mon portfolio</title>
-<link rel="stylesheet" href="../les_css/accueil.css">
+	<meta charset="UFT-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+	<title>Mon portfolio</title>
+	<link rel="stylesheet" href="../les_css/accueil.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 
 
-   <script src="https://kit.fontawesome.com/ad121f0985.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/ad121f0985.js" crossorigin="anonymous"></script>
 
 
 </head>
 <body>
-	<header>
-		<nav>
+	
+	<nav id="navbar">
 			<h2 class="logo">moh<span id="leI">i</span>can</h2>
-			<div class="toggle">
-				<i class="fa-solid fa-bars ouvert"></i>
-				<i class="fa-regular fa-rectangle-xmark ferme"></i>
+			<div class="navliens">
+				<ul id="menu">
+					<li><a href="accueil.html">ACCUEIL</a></li>
+					<li><a href="a_propos.html">À PROPOS</a></li>
+					<li><a href="projets.html">PROJETS</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
 				
 			</div>
-			<ul id="menu">
-				<li><a href="accueil.html">ACCUEIL</a></li>
-				<li><a href="a_propos.html">À PROPOS</a></li>
-				<li><a href="projets.html">PROJETS</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
-			</ul>
-		</nav>
+			
+			<div id="iconeFermeOuvert">
+				<i class="fa-solid fa-bars derouler"></i>
+				<i class="fa-solid fa-xmark fermer"></i>
+			</div>
+				
+	
+	</nav>
 		
-	</header>
-	<br>
 	<section class="accueil">
 		<div id="textPresentation">
-			<h4 id="bienvenue"> Bienvenue, je m'appelle <span id="monNom">Mario Sekpona</span> </h4>
-			<h1 id = "statut"> je suis étudiant en informatique et passionné du développeur front-end</h1>
+			<!--<h4 id="bienvenue"> Bienvenue, je m'appelle <span id="monNom">Mario Sekpona</span> </h4>
+			<h1 id = "statut"> je suis étudiant en informatique et passionné du développeur front-end</h1> -->
 
 		</div>
 		<div id="Apropos">
@@ -58,10 +64,76 @@
 
 </body>
 </html>
-<script type="text/javascript">
-	let toggle = document.querySelector('.toggle');
-	let body = document.querySelector('body');
-	toggle.addEventListener('click', function(){
-		body.classList.toggle('open');
-	})
+<script >
+	const derouler = document.querySelector(".derouler");
+	const fermer = document.querySelector(".fermer");
+	let iconeMenu = document.querySelector("#iconeFermeOuvert");
+	const navliens = document.querySelector(".navliens");
+	document.querySelector(".fermer").style.display = "none";
+	let compteur = 0;
+	
+	window.addEventListener("load", function() {
+		if(window.innerWidth < 900){
+			document.querySelector(".navliens").style.display = "none";
+			
+
+
+
+		}
+		/*else{
+			document.querySelector(".fermer").style.display = "none";
+			document.querySelector(".derouler").style.display = "none";
+
+		}*/
+	});
+
+	window.addEventListener("resize", function() {
+   if (window.innerWidth >= 900) {
+   	
+    /* la fenêtre est plus large ou égale à 900px */
+    	document.querySelector("#iconeFermeOuvert").style.display = "none";
+    	document.querySelector(".navliens").style.display = "block";
+   } else {
+    /* la fenêtre est plus petite que 900px */
+    	document.querySelector("#iconeFermeOuvert").style.display = "block";
+    	document.querySelector(".navliens").style.display = "none";
+    	document.querySelector(".fermer").style.display = "none";
+			/*iconeMenu.appendChild(derouler);*/
+		document.querySelector(".derouler").style.display = "block";
+
+  }
+	});
+
+
+
+
+	iconeMenu.addEventListener('click', function(){
+		//initialement c'est l'icône déroulante qui est présente
+		compteur+=1;
+		if(compteur%2==1 ){// si on clique sur l'icône déroulante
+			//iconeMenu.removeChild(derouler); //on enlève le déroulant
+
+			document.querySelector(".derouler").style.display = "none";
+			document.querySelector(".fermer").style.display = "block";
+			/*iconeMenu.appendChild(fermer);// onmet la croix.*/
+			//on active l'apparution du menu
+			document.querySelector(".navliens").style.display = "block";
+
+		}else if(compteur%2==0){ //Sinon  si c'est l'icône fermante sur laquelle
+			//on clique, on fait le contraire.
+			//iconeMenu.removeChild(fermer);
+			document.querySelector(".fermer").style.display = "none";
+			/*iconeMenu.appendChild(derouler);*/
+			document.querySelector(".derouler").style.display = "block";
+			document.querySelector(".navliens").style.display = "none";
+
+		} /*else if(window.innerWidth >= 900){
+			document.querySelector(".navliens").style.display = "block";
+			document.querySelector(".fermer").style.display = "none";
+			document.querySelector(".derouler").style.display = "none";
+
+		}*/
+	
+	});
+
 </script>
