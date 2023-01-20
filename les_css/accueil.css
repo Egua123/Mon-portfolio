@@ -1,4 +1,4 @@
-
+ 
 :root{
 
 }
@@ -66,8 +66,6 @@ color: rgb(100,0,0);
 	height: 100vh;
 	background: /*rgba(2,46,81,0.7)*/ url(../media/ampoule.jpg);
 	/*background-blend-mode: darken;*/
-
-	/*background: linear-gradient(183deg, rgba(45,47,83,1) 13%, rgba(65,67,99,1) 23%, rgba(170,171,184,1) 100%);*/	
 	
 	
 	background-size: cover;
@@ -112,7 +110,7 @@ color: rgb(100,0,0);
 	position: absolute;
 	top: 50px;
 	right: 50px;
-	width: 35px;
+	/*width: 35px;*/
 	font-size: 2em;
 	cursor: pointer;
 		/*color: red;*/
@@ -229,7 +227,7 @@ color: rgb(100,0,0);
 
 #apropos{
 	
-	
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -256,17 +254,50 @@ color: rgb(100,0,0);
 
 
 }
+
 .textblocks{
-	width: calc(50% );
+	width: calc(50vw );
 	height: 100%;
+	line-height: 2em;
+	background-color: white;
+
+	padding: 1vh 1vw 1vh 3.5vw;
+	text-align: justify;
+
 
 }
 .imageblocks{
-	width: calc(50% + 7em);
+	width: calc(55vw);
 	height: 100%;
 	
-	background-color: rgb(2,46,81,0.5);
+	background: rgba(0, 0, 0, 0.2) url(../media/header.jpeg) ;
 	
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-blend-mode: darken;
+	border-left: 5vw solid white;
+	border-bottom: 40vh solid transparent;
+}
+
+
+
+#cgauche{
+	
+	position: absolute;
+	font-size: 1.5em;
+	top: 50vh;
+	left:20vw;
+
+}
+
+#cdroite{
+	
+	position: absolute;
+	font-size: 1.5em;
+	top: 50vh;
+	left:75vw;
 
 }
 
