@@ -38,21 +38,27 @@
 
 	<div id="emballage">
 		<section class="accueil">
-			<div id="textPresentation">
+			<div id="textIntro">
 				<h4 id="bienvenue"> Bienvenue, je m'appelle <span id="monNom">Mario Sekpona</span> </h4>
-				<h1 id = "statut"> je suis étudiant en informatique et passionné du développeur front-end</h1>
-
+				<h1 id = "statut"> je suis étudiante </h1>
+				
 			</div>
 			
 			
 		</section>
 
 		<section id="apropos">
-				<div id="block1" class="blocks">
-					<div id="textblock1" class="textblocks">
+
+			
+
+
+
+
+				<div id="presentation" class="blocks">
+					<div id="textpresentation" class="textblocks">
 
 						<h1>
-							What is Lorem Ipsum?
+							Présentation
 						</h1>
 
 						<div>
@@ -69,11 +75,54 @@
 				</div>
 
 
-				<div id="block2" class="blocks">
-					<div id="textblock2" class="textblocks">
+				<div id="langues" class="blocks">
+					<div id="textlangues" class="textblocks">
 
 						<h1>
-							What is Lorem Ipsum?
+							Langues
+						</h1>
+
+						<div>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+							
+						</div>
+
+					</div>
+					
+					<div class="imageblocks">
+						
+						
+					</div>
+					
+				</div>
+
+				<div id="competences" class="blocks">
+					<div id="textcompetences" class="textblocks">
+
+						<h1>
+							Compétences
+						</h1>
+
+						<div>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+							
+						</div>
+
+					</div>
+					
+					<div class="imageblocks">
+						
+						
+					</div>
+					
+				</div>
+
+
+				<div id="passions" class="blocks">
+					<div id="textpassions" class="textblocks">
+
+						<h1>
+							Passions
 						</h1>
 
 						<div>
@@ -120,6 +169,8 @@
 </body>
 </html>
 <script >
+
+	/*menu hamburger: Cette partie du code s'occu */
 	const derouler = document.querySelector(".derouler");
 	const fermer = document.querySelector(".fermer");
 	let iconeMenu = document.querySelector("#iconeFermeOuvert");
@@ -155,7 +206,7 @@
     	document.querySelector(".fermer").style.display = "none";
 			/*iconeMenu.appendChild(derouler);*/
 		document.querySelector(".derouler").style.display = "block";
-
+ 
   }
 	});
 
@@ -165,6 +216,7 @@
 	iconeMenu.addEventListener('click', function(){
 		//initialement c'est l'icône déroulante qui est présente
 		compteur+=1;
+		
 		if(compteur%2==1 ){// si on clique sur l'icône déroulante
 			//iconeMenu.removeChild(derouler); //on enlève le déroulant
 
@@ -190,5 +242,82 @@
 		}*/
 	
 	});
+
+
+
+
+
+
+
+
+
+	/*____________________________________________________________ */
+
+	//Cette partie du code permet d'animer le caroussel
+
+	let blocks = document.getElementsByClassName('blocks');
+	
+	let precedent = document.querySelector("#cgauche");
+	let suivant = document.querySelector("#cdroite");
+	let tabBlocks =["#presentation","#langues","#passions","#competences"];
+	
+	let nombreClick = 0;
+	let element = 0;
+
+	function enleverActive(){
+		for (var i; i<blocks.length ; i++) {
+
+			blocks[i].classList.remove("active");
+		}
+		
+
+	}
+	
+	function displayElt(){
+		document.querySelector("#presentation").style.display = "none";
+		document.querySelector("#langues").style.display = "none";
+		document.querySelector("#passions").style.display = "none";
+		document.querySelector("#competences").style.display = "none";
+
+
+	}
+
+
+	precedent.addEventListener('click', function(){
+
+		
+		nombreClick -= 1;
+		element = Math.abs(nombreClick%4);
+		displayElt();
+		document.querySelector(tabBlocks[element]).style.display = "flex";
+		document.querySelector("#monNom").innerHTML = ""+nombreClick+ " "+ element;
+		
+		
+
+
+	});
+
+	suivant.addEventListener('click', function(){
+
+		
+		nombreClick += 1;
+		element = Math.abs(nombreClick%4);
+		displayElt();
+		document.querySelector( tabBlocks[element]).style.display = "flex";
+		document.querySelector("#monNom").innerHTML = ""+nombreClick+ " "+ element;
+		
+		
+		
+
+	});
+
+
+
+
+
+
+
+
+
 
 </script>
