@@ -125,15 +125,6 @@ nav ul li a:hover{
 	transform: scale(1.5) translate(-25%,-25%);	
 }
 
-.cgauche{
-	z-index: 1000;
-	position: absolute;
-	font-size: 4em;
-	width: 5em;
-	top: 50%;
-	left:16vw;
-
-}
 
 /*
 @keyframes monBloque{
