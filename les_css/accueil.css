@@ -52,7 +52,7 @@ h2.logo {
 }
 
 #leI{
-color: rgb(100,0,0);
+color: #BC986A;
 
 }
 
@@ -64,10 +64,8 @@ color: rgb(100,0,0);
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	background: /*rgba(2,46,81,0.7)*/ url(../media/ampoule.jpg);
-	/*background-blend-mode: darken;*/
-	
-	
+	background: rgba(0,0,0,0.4) url(../media/kayak.jpg);
+	background-blend-mode: darken;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -77,15 +75,15 @@ color: rgb(100,0,0);
 
 #navbar{
 	z-index: 8;
-	position: absolute;
-	
+	position: fixed;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	box-sizing:border-box;
-	
-	color: black;
-	background: rgba(2,46,81,1);
+	color: #FBEEC1;
+	background: rgba(0,0,0,0.4);
+	backdrop-filter: blur(1em) ;
+	box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);
 	height: 8vh;
 	width: 100vw;
 }
@@ -138,13 +136,12 @@ color: rgb(100,0,0);
 #navbar ul li{
 	list-style-type: none ;
 	display:flex;
-		justify-content:center ;
+	justify-content:center ;
 	align-items: center;
 	height: 100%;
-	border-radius: 4vh;
-	background: whitesmoke;
-	box-shadow:  4px 4px 9px #022745,
-             -4px -4px 9px #02355d;
+	
+	
+	
 
 }
 
@@ -171,7 +168,7 @@ color: rgb(100,0,0);
 #textIntro{
 	overflow: hidden;
 	position: absolute;
-	color: rgba(0, 0, 0, 1.0);
+	color:  #FBEEC1;;
 	max-width: 40vw;
 	top: 35%;
 	left: 20%;
@@ -217,8 +214,9 @@ color: rgb(100,0,0);
 }
 
 #monNom{
-	font-weight: bold;
-	color:rgb(100,0,0);
+	
+	font-weight: 800;
+	color: #BC986A;
 }
 
 
@@ -322,7 +320,9 @@ color: rgb(100,0,0);
 	justify-content: center;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(222, 216, 212,0.8);
+	background: #eeedea;
+	
+	/*background-color: rgba(222, 216, 212,0.8);*/
 	background-size: cover;
 	background-position: center;
 	
@@ -357,7 +357,8 @@ color: rgb(100,0,0);
 	align-items: center;
 	justify-content: space-around;
 	align-content: space-around;
-	
+	transform: perspective(30vh);
+	transform-style: preserve-3d;
 	width: 80vw;
 	height: 80vh;
 	margin: auto;
@@ -370,13 +371,23 @@ color: rgb(100,0,0);
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
+	transform-style: preserve-3d;
+	transform-origin: 50% 100%;
+	transform: rotateX(15deg) scale(0.6);
+	perspective: 10vh;
+	transform-style: preserve-3d;
+	transition: .5s all ease;transition: .5s all ease;
 	height: 40%;
 	width: 30%;
 	border-radius: 15px; 
 	box-shadow: -4px -4px 8px rgba(255,255,255,0.2), 4px 4px 8px rgba(0,0,0,0.4);
-	transition: all 2s ;
-	transform: scale(1.0) translate(0%,0%);
+	transition: transform 0.6s;
+	
+}
+
+
+.brique:hover{
+	transform: rotateX(0deg) scale(1);	
 }
 
 .titreprojet{
@@ -394,8 +405,10 @@ color: rgb(100,0,0);
 	border: solid;
 	height: 70%;
 	width: 100%;
+	
 
 }
+
 .boutonsprojet{
 	display: flex;
 	align-items: center;
@@ -429,9 +442,60 @@ color: rgb(100,0,0);
 
 }
 
+#imageprojet4{
+	
+	background-image: url(../media/jeuechec.png);
+	background-size: cover;
+	background-position: center;
+	
+
+}
+#imageprojet5{
+	
+	background-image: url(../media/trianglerecursive.jpg);
+	background-size: cover;
+	background-position: center;
+	
+}
+
+.boutonsprojet{
+	display:flex ;
+	align-items: center;
+	justify-content: space-around ;
+}
+
+.deuxboutons{
+	height: 50%;
+	width: 30%;
+	border: none;
+	align-items: center;
+	justify-content: center;
+	color: #659DBD;
+	border-radius: 1em;
+	cursor: pointer; 
+	overflow: hidden;
+    background-color: white;
+    
+    font-size: 60%;      
+    transition: all .5s ease-in-out;
+            
+        
+          
+
+          
+         
+
+}
 
 
+.deuxboutons:hover{
+	background-color: #FBEEC1 ;
+	color: white;
+            
 
+}
+
+/*
 .brique:nth-child(1):hover{
 	transform: scale(1.5) translate(50%,50%);	
 }
@@ -452,7 +516,7 @@ color: rgb(100,0,0);
 	transform: scale(1.5) translate(-25%,-25%);	
 }
 
-
+*/
 
 
 
@@ -477,6 +541,7 @@ color: rgb(100,0,0);
 	}
 
 	.navliens{
+		display: fixed;
 		z-index: 10;
 		position: absolute;
 		top:0;
