@@ -214,10 +214,12 @@ color: #BC986A;
 }
 
 #monNom{
-	
+
 	font-weight: 800;
 	color: #BC986A;
 }
+
+
 
 
 /********************************************************************************/
@@ -236,6 +238,8 @@ color: #BC986A;
 	background-position: center;
 	
 }
+
+
 #apropos .blocks{
 	position: absolute;
 	display: flex;
@@ -395,7 +399,6 @@ color: #BC986A;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
 	border: solid;
 	height: 15%;
 	width: 100%;
@@ -494,6 +497,62 @@ color: #BC986A;
             
 
 }
+
+
+/********************************************************************************/
+/*Partie sur la section du clique sur le bouton description*/
+
+
+.descriptionprojet{
+	z-index: 15;
+	position: absolute;
+	top: auto;
+	left:auto;	
+	display: none;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	color: black;
+	width: 70vw;
+	height: 75vh;
+	margin: auto;
+	animation: pagedescription 0.5s ease-in-out;
+}
+
+@keyframes pagedescription{
+	from {
+
+		transform: scale(0);
+		opacity: 0;
+
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+
+
+	}
+
+
+}
+
+
+
+
+#iconefermedescription{
+	display: none;
+	z-index: 15;
+	position: absolute; 
+	font-size: 2em;
+	top:10vh;
+	 left:84vw;
+
+
+
+}
+
 
 /*
 .brique:nth-child(1):hover{

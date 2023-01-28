@@ -174,10 +174,11 @@
 				<div class="brique" id="brique1">
 
 					<div class="titreprojet">1</div>
+
 					<div class="imageprojet" id="imageprojet1">2</div>
 
 					<div class="boutonsprojet">
-						<button class="deuxboutons"> 
+						<button class="deuxboutons" > 
 
 							<span class="boutontextprojet">voir sur</span>
 
@@ -187,7 +188,7 @@
 	
 						</button>
 
-						<button class="deuxboutons">
+						<button class="deuxboutons boutondetail" id="boutondetail1">
 								<span class="boutontextprojet">description</span>
 						</button>	
 						
@@ -196,42 +197,148 @@
 
 
 				</div>
+
 				<div class="brique" id="brique2">
 
 					<div class="titreprojet"></div>
+
 					<div class="imageprojet" id="imageprojet2"></div>
-					<div class="boutonsprojet"></div>
+
+					<div class="boutonsprojet">
+
+						<button class="deuxboutons" > 
+
+							<span class="boutontextprojet">voir sur</span>
+
+							<span class="boutoniconprojet">
+								<i class="fa-brands fa-github"></i>
+							</span>
+	
+						</button>
+
+						<button class="deuxboutons boutondetail" id="boutondetail2">
+								<span class="boutontextprojet">description</span>
+						</button>	
+						
+
+
+					</div>
 
 				</div>
+
 				<div class="brique" id="brique3">
 
 					<div class="titreprojet"></div>
+
 					<div class="imageprojet" id="imageprojet3"></div>
-					<div class="boutonsprojet"></div>
+
+
+					<div class="boutonsprojet">
+
+						<button class="deuxboutons" > 
+
+								<span class="boutontextprojet">voir sur</span>
+
+								<span class="boutoniconprojet">
+									<i class="fa-brands fa-github"></i>
+								</span>
+		
+							</button>
+
+							<button class="deuxboutons boutondetail" id="boutondetail3">
+									<span class="boutontextprojet">description</span>
+							</button>	
+
+					</div>
 
 				</div>
 				<div class="brique" id="brique4">
 					
 					<div class="titreprojet"></div>
+
 					<div class="imageprojet" id="imageprojet4"></div>
-					<div class="boutonsprojet"></div>
+
+					<div class="boutonsprojet">
+						
+						<button class="deuxboutons" > 
+
+							<span class="boutontextprojet">voir sur</span>
+
+							<span class="boutoniconprojet">
+								<i class="fa-brands fa-github"></i>
+							</span>
+	
+						</button>
+
+						<button class="deuxboutons boutondetail" id="boutondetail4">
+								<span class="boutontextprojet">description</span>
+						</button>	
+
+					</div>
 
 				</div>
 				<div class="brique" id="brique5">
 					
 					<div class="titreprojet"></div>
+
 					<div class="imageprojet" id="imageprojet5"></div>
-					<div class="boutonsprojet"></div>
+
+					<div class="boutonsprojet">
+
+						<button class="deuxboutons" > 
+
+							<span class="boutontextprojet">voir sur</span>
+
+							<span class="boutoniconprojet">
+								<i class="fa-brands fa-github"></i>
+							</span>
+	
+						</button>
+
+						<button class="deuxboutons boutondetail" id="boutondetail5">
+								<span class="boutontextprojet">description</span>
+						</button>	
+						
+
+
+					</div>
 
 				</div>
 				<div class="brique" id="brique6">
 					
 					<div class="titreprojet"></div>
+
 					<div class="imageprojet" id="imageprojet6"></div>
-					<div class="boutonsprojet"></div>
+
+					<div class="boutonsprojet">
+
+						<button class="deuxboutons" > 
+
+							<span class="boutontextprojet">voir sur</span>
+
+							<span class="boutoniconprojet">
+								<i class="fa-brands fa-github"></i>
+							</span>
+	
+						</button>
+
+						<button class="deuxboutons boutondetail" id="boutondetail6">
+								<span class="boutontextprojet">description</span>
+						</button>	
+
+
+					</div>
 
 				</div>		
 			</div>
+			<div class="descriptionprojet" id="descriptionprojet1">descriptionprojet1</div>
+			<div class="descriptionprojet" id="descriptionprojet2">descriptionprojet2</div>
+			<div class="descriptionprojet" id="descriptionprojet3">descriptionprojet3</div>
+			<div class="descriptionprojet" id="descriptionprojet4">descriptionprojet4</div>
+			<div class="descriptionprojet" id="descriptionprojet5">descriptionprojet5</div>
+			<div class="descriptionprojet" id="descriptionprojet6">descriptionprojet6</div>
+			<div id="iconefermedescription"><i class="fa-solid fa-xmark fermerDescription"></i></div>
+
 	
 		</section>	
 
@@ -356,6 +463,8 @@
 	}
 
 
+
+
 	precedent.addEventListener('click', function(){
 
 		
@@ -384,6 +493,59 @@
 
 	});
 
+/*____________________________________________________________ */
+
+	//Cette partie du code permet d'animer le clique sur la bouton description de la section projet
+
+	let descriptionprojet =document.querySelector(".descriptionprojet");  
+	 
+	let boutondetail = document.querySelector(".boutondetail");  
+
+	const elementsBoutonProjet = document.getElementsByClassName("boutondetail");
+	
+	alert(elementsBoutonProjet.length);
+	
+	boutondetail.addEventListener('click',function(){
+
+		
+		for (var i = 0; i < elementsBoutonProjet.length; i++) {
+
+		   if (elementsBoutonProjet[i].id === "boutondetail1") {
+		   	
+		   	document.getElementsByClassName("descriptionprojet")[0].style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	document.querySelector("#iconefermedescription").style.cssText ="display: block;  ";
+
+		        
+		   } /*else if (elementsBoutonProjet[i].id === "boutondetail2") {
+		   	document.querySelector(".descriptionprojet").style.display = "none";
+		   	document.getElementsByClassName("descriptionprojet")[1].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
+
+		   } else if (elementsBoutonProjet[i].id === "boutondetail3") {
+		   	document.querySelector(".descriptionprojet").style.display = "none";
+		   	document.getElementsByClassName("descriptionprojet")[2].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
+		        
+		   } else if (elementsBoutonProjet[i].id === "boutondetail4") {
+		   	document.querySelector(".descriptionprojet").style.display = "none";
+		   	document.getElementsByClassName("descriptionprojet")[3].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
+		        
+		   } else if (elementsBoutonProjet[i].id === "boutondetail5") {
+		   	document.querySelector(".descriptionprojet").style.display = "none";
+		   	document.getElementsByClassName("descriptionprojet")[4].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
+		        
+		   } else if (elementsBoutonProjet[i].id === "boutondetail6") {
+		   	document.querySelector(".descriptionprojet").style.display = "none";
+		   	document.getElementsByClassName("descriptionprojet")[5].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
+		        
+		   } */
+		}
+
+		
+
+
+
+
+
+	});
 
 
 
