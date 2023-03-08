@@ -331,16 +331,55 @@
 
 				</div>		
 			</div>
-			<div class="descriptionprojet" id="descriptionprojet1">descriptionprojet1</div>
-			<div class="descriptionprojet" id="descriptionprojet2">descriptionprojet2</div>
-			<div class="descriptionprojet" id="descriptionprojet3">descriptionprojet3</div>
-			<div class="descriptionprojet" id="descriptionprojet4">descriptionprojet4</div>
-			<div class="descriptionprojet" id="descriptionprojet5">descriptionprojet5</div>
-			<div class="descriptionprojet" id="descriptionprojet6">descriptionprojet6</div>
+		
+				<div class="descriptionprojet" id="descriptionprojet1">descriptionprojet1</div>
+				<div class="descriptionprojet" id="descriptionprojet2">descriptionprojet2</div>
+				<div class="descriptionprojet" id="descriptionprojet3">descriptionprojet3</div>
+				<div class="descriptionprojet" id="descriptionprojet4">descriptionprojet4</div>
+				<div class="descriptionprojet" id="descriptionprojet5">descriptionprojet5</div>
+				<div class="descriptionprojet" id="descriptionprojet6">descriptionprojet6</div>
+					
+
+		
+			
 			<div id="iconefermedescription"><i class="fa-solid fa-xmark fermerDescription"></i></div>
 
 	
 		</section>	
+
+		<footer>
+			<div class="emballage_pied">
+				<div class="lesicones_enbas">
+					<div class="icon_pied">
+						<a href="">
+							<i class="fa-brands fa-linkedin"></i>
+						</a>
+					</div>
+					<div class="icon_pied">
+						<a href="">
+							<i class="fa-brands fa-github"></i>
+						</a>
+					</div>
+					<div class="icon_pied">
+						<a href="">
+							<i class="fa-solid fa-download"></i>
+						</a>
+					</div>
+
+					
+				</div>
+				<div class="nav_pied">
+						<ul id="menu_pied">
+							<li><a href="accueil.html">ACCUEIL</a></li>
+							<li><a href="a_propos.html">À PROPOS</a></li>
+							<li><a href="projets.html">PROJETS</a></li>
+							<li><a href="contact.html">CONTACT</a></li>
+						</ul>
+						
+				</div>
+			</div>
+
+		</footer>
 
 	</div>
 
@@ -472,7 +511,7 @@
 		element = Math.abs(nombreClick%4);
 		displayElt();
 		document.querySelector(tabBlocks[element]).style.display = "flex";
-		document.querySelector("#monNom").innerHTML = ""+nombreClick+ " "+ element;
+		
 		
 		
 
@@ -486,7 +525,6 @@
 		element = Math.abs(nombreClick%4);
 		displayElt();
 		document.querySelector( tabBlocks[element]).style.display = "flex";
-		document.querySelector("#monNom").innerHTML = ""+nombreClick+ " "+ element;
 		
 		
 		
@@ -497,46 +535,147 @@
 
 	//Cette partie du code permet d'animer le clique sur la bouton description de la section projet
 
-	let descriptionprojet =document.querySelector(".descriptionprojet");  
+	let descriptionprojet =document.querySelectorAll(".descriptionprojet");  
+	const tabDescriptionProjet = document.getElementsByClassName("descriptionprojet");
 	 
-	let boutondetail = document.querySelector(".boutondetail");  
+	let boutondetail = document.querySelectorAll(".boutondetail");  
 
 	const elementsBoutonProjet = document.getElementsByClassName("boutondetail");
+
+	let iconeFermerDescription = document.querySelector("#iconefermedescription");
 	
-	alert(elementsBoutonProjet.length);
-	
+	//alert(elementsBoutonProjet.length);
+
+
+	//document.querySelector(".descriptionprojet").style.cssText ="display: none;  ";
+	function fermerDescriptionProjet(){
+
+		//document.querySelector(".descriptionprojet").style.cssText ="display: none;  ";
+		document.querySelector("#dpactuelle").style.cssText ="display: none;  ";
+		document.querySelector("#dpactuelle").removeAttribute("id");
+			
+		iconeFermerDescription.style.cssText ="display: none;  ";
+
+	}
+	iconeFermerDescription.addEventListener('click', fermerDescriptionProjet);
+
+
+	for (var i = 0; i < elementsBoutonProjet.length; i++) {
+		elementsBoutonProjet[i].addEventListener("click", function() {
+
+		   if (this.id === "boutondetail1") {
+
+		   	
+		   	document.getElementsByClassName("descriptionprojet")[0].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6); ";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+
+
+		  } else if (this.id === "boutondetail2") {
+		   	
+		   	document.getElementsByClassName("descriptionprojet")[1].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6); ";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
+		   }  else if (this.id === "boutondetail3") {
+		   	document.getElementsByClassName("descriptionprojet")[2].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
+		   	
+		        
+		   } else if (this.id === "boutondetail4") {
+		   	document.getElementsByClassName("descriptionprojet")[3].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
+		   	
+		        
+		   } else if (this.id === "boutondetail5") {
+		   	document.getElementsByClassName("descriptionprojet")[4].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
+		        
+		   } else if (this.id === "boutondetail6") {
+		   	
+		   	document.getElementsByClassName("descriptionprojet")[5].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
+		   } 
+
+
+		});
+
+
+
+
+	}
+	/*
 	boutondetail.addEventListener('click',function(){
 
 		
 		for (var i = 0; i < elementsBoutonProjet.length; i++) {
 
 		   if (elementsBoutonProjet[i].id === "boutondetail1") {
+
 		   	
-		   	document.getElementsByClassName("descriptionprojet")[0].style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
-		   	document.querySelector("#iconefermedescription").style.cssText ="display: block;  ";
+		   	document.getElementsByClassName("descriptionprojet")[0].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+		   	
+
 
 		        
-		   } /*else if (elementsBoutonProjet[i].id === "boutondetail2") {
-		   	document.querySelector(".descriptionprojet").style.display = "none";
-		   	document.getElementsByClassName("descriptionprojet")[1].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
+		   } else if (elementsBoutonProjet[i].id === "boutondetail2") {
+		   	
+		   	document.getElementsByClassName("descriptionprojet")[1].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
+
+		   	
+		   	
 
 		   } else if (elementsBoutonProjet[i].id === "boutondetail3") {
-		   	document.querySelector(".descriptionprojet").style.display = "none";
-		   	document.getElementsByClassName("descriptionprojet")[2].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
+		   	document.getElementsByClassName("descriptionprojet")[2].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
+		   	
 		        
 		   } else if (elementsBoutonProjet[i].id === "boutondetail4") {
-		   	document.querySelector(".descriptionprojet").style.display = "none";
-		   	document.getElementsByClassName("descriptionprojet")[3].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
+		   	document.getElementsByClassName("descriptionprojet")[3].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
+		   	
 		        
 		   } else if (elementsBoutonProjet[i].id === "boutondetail5") {
-		   	document.querySelector(".descriptionprojet").style.display = "none";
-		   	document.getElementsByClassName("descriptionprojet")[4].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
+		   	document.getElementsByClassName("descriptionprojet")[4].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
 		        
 		   } else if (elementsBoutonProjet[i].id === "boutondetail6") {
-		   	document.querySelector(".descriptionprojet").style.display = "none";
-		   	document.getElementsByClassName("descriptionprojet")[5].style.cssText ="z-index: 1000;position: absolute;top: auto;left:auto;	display: none;flex-wrap: wrap;align-items: center;justify-content: center;background-color: white;color: black;width: 80vw;height: 80vh;margin: auto;";
-		        
-		   } */
+		   	
+		   	document.getElementsByClassName("descriptionprojet")[5].setAttribute('id','dpactuelle');
+		   	document.querySelector("#dpactuelle").style.cssText ="display: flex; box-shadow: 0.4em 0.4em 0.8em 0.4em rgba(0, 0, 0, 0.6);";
+		   	iconeFermerDescription.style.cssText ="display: block;  ";
+		   	
+
+		   } 
 		}
 
 		
@@ -546,6 +685,8 @@
 
 
 	});
+
+	*/
 
 
 
