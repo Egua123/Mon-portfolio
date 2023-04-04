@@ -71,7 +71,7 @@
 
 					</div>
 					
-					<div class="imageblocks">
+					<div class="imageblocks" id="imgLang">
 						
 						
 					</div>
@@ -92,7 +92,7 @@
 
 					</div>
 					
-					<div class="imageblocks">
+					<div class="imageblocks" id="imgComp">
 						
 						
 					</div>
@@ -114,14 +114,14 @@
 
 					</div>
 					
-					<div class="imageblocks">
+					<div class="imageblocks" id="imgPass">
 						
 						
 					</div>
 					
 				</div>
 
-				<div id="presentation" class="blocks">
+				<div id="presentation" class="blocks active">
 					<div id="textpresentation" class="textblocks">
 
 						<h1>
@@ -135,7 +135,7 @@
 
 					</div>
 
-					<div class="imageblocks">
+					<div class="imageblocks" id="imgPre">
 						
 					</div>
 					
@@ -484,7 +484,7 @@
 	let element = 0;
 
 	function enleverActive(){
-		for (var i; i<blocks.length ; i++) {
+		for (var i=0; i<blocks.length ; i++) {
 
 			blocks[i].classList.remove("active");
 		}
@@ -501,7 +501,33 @@
 
 	}
 
+	function changerImageCaroussel(eltTabBlock){
 
+		
+		if(eltTabBlock=="#presentation"){
+
+			document.querySelector(".imageblocks").style.cssText =
+						" background: rgba(0, 0, 0, 0.2) url(../media/header.jpeg) ;";
+
+		} else if(eltTabBlock=="#langues"){
+
+			document.querySelector(".imageblocks").style.cssText =
+						" background: rgba(0, 0, 0, 0.2) url(../media/langues.png) ;";
+
+		} else if(eltTabBlock=="#passions"){
+			
+			document.querySelector(".imageblocks").style.cssText =
+						" background: rgba(0, 0, 0, 0.2) url(../media/kayak-passion.jpg) ;";
+
+		} else if(eltTabBlock=="#competences"){
+			
+			document.querySelector(".imageblocks").style.cssText =
+						" background: rgba(0, 0, 0, 0.2) url(../media/competences.jpg) ;";
+		}
+
+
+
+	}
 
 
 	precedent.addEventListener('click', function(){
@@ -511,11 +537,14 @@
 		element = Math.abs(nombreClick%4);
 		displayElt();
 		document.querySelector(tabBlocks[element]).style.display = "flex";
-		
-		
+		//changerImageCaroussel(tabBlocks[element]);
+		enleverActive();
+		blocks[element].classList.add("active");
 		
 
-
+		
+		document.querySelector(tabBlocks[element]).style.animation = "caroussel 1s ease-in-out";
+		
 	});
 
 	suivant.addEventListener('click', function(){
@@ -525,7 +554,12 @@
 		element = Math.abs(nombreClick%4);
 		displayElt();
 		document.querySelector( tabBlocks[element]).style.display = "flex";
+		enleverActive();
+		blocks[element].classList.add("active");
+
 		
+		document.querySelector(tabBlocks[element]).style.animation = "caroussel 1s ease-in-out";
+		//changerImageCaroussel(tabBlocks[element]);
 		
 		
 

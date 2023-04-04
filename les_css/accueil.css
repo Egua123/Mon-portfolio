@@ -258,16 +258,19 @@ color: #BC986A;
 	background: linear-gradient(145deg, #f0f0f0, #cacaca);
 	box-shadow:  6px 6px 12px rgba(190, 190, 190, 0.4),
              -6px -6px 12px rgba(255,255,255,0.2);
-
-	/*background: rgba(2,46,81,0.7) url(../media/header.jpeg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;*/
-
+ 	
 
 }
 
 
+@keyframes caroussel {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .textblocks{
 	width: calc(50vw);
 	height: 100%;
@@ -283,16 +286,51 @@ color: #BC986A;
 .imageblocks{
 	width: calc(55vw);
 	height: 100%;
-	background: rgba(0, 0, 0, 0.2) url(../media/header.jpeg) ;
+	/*background: rgba(0, 0, 0, 0.2) url(../media/header.jpeg) ;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-blend-mode: darken;
+	background-blend-mode: darken;*/
 	border-left: 5vw solid rgb(222, 216, 212);;
 	border-bottom: 40vh solid transparent;
 }
 
+#imgPre {
+  background: rgba(0, 0, 0, 0.2) url(../media/header.jpeg);
+  background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#imgPass {
+  background: rgba(0, 0, 0, 0.2) url(../media/kayak-passion.jpg);
+  background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#imgComp {
+  background: rgba(0, 0, 0, 0.2) url(../media/competences.jpg);
+  background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#imgLang {
+	position: relative;
+  background: rgba(0, 0, 0, 0.2) url(../media/langues.png);
+  background-size: cover;
+	background-attachment: fixed;
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+/*
+#langues, #passions, #competences {
+  display: none;
+  background-size: cover;
+  background-position: center;
+}*/
 
 
 #cgauche{
