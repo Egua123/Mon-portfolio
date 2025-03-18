@@ -282,6 +282,10 @@ color: #BC986A;
 	
 	padding: 1vh 1vw 1vh 3.5vw;
 	text-align: justify;
+	font-family: 'Montserrat', sans-serif !important;
+	font-size: calc(0.5rem + 0.3vw); /* Taille de police adaptative */
+	overflow-y: auto; /* Permet le défilement vertical */
+    overflow-x: hidden; /* Cache tout dépassement horizontal */
 }
 .imageblocks{
 	width: calc(55vw);
@@ -310,13 +314,22 @@ color: #BC986A;
 	background-position: center;
 	background-repeat: no-repeat;
 }
-#imgComp {
+#imgComptech {
+  background: rgba(0, 0, 0, 0.2) url(../media/comptech.png);
+  background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#imgComprel {
   background: rgba(0, 0, 0, 0.2) url(../media/competences.jpg);
   background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
 #imgLang {
 	position: relative;
   background: rgba(0, 0, 0, 0.2) url(../media/langues.png);
@@ -338,7 +351,7 @@ color: #BC986A;
 	position: absolute;
 	font-size: 1.5em;
 	top: 50vh;
-	left:20vw;
+	left:15vw;
 	transition: opacity 0.3 ease-in-out;
 
 }
@@ -348,7 +361,7 @@ color: #BC986A;
 	position: absolute;
 	font-size: 1.5em;
 	top: 50vh;
-	left:75vw;
+	left:80vw;
 	transition: opacity 0.3 ease-in-out;
 
 }
@@ -442,12 +455,19 @@ color: #BC986A;
 
 .titreprojet{
 	
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: solid;
-	height: 15%;
-	width: 100%;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Proportionnel à la largeur de la brique (90%) */
+    height: 15%; /* Proportionnel à la hauteur de la brique */
+    padding: 5px; /* Espacement interne pour une meilleure présentation */
+    text-align: center; /* Centre le texte */
+    font-family: 'Arial', sans-serif; /* Police moderne */
+    font-size: calc(0.8rem + 0.3vw); /* Taille de police adaptative */
+    color: white; /* Couleur du texte */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    border-radius: 4px; /* Coins arrondis */
+    
 
 }
 .imageprojet{
@@ -461,7 +481,7 @@ color: #BC986A;
 .boutonsprojet{
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around ;
 	border: solid;
 	height: 15%;
 	width: 100%;
@@ -470,14 +490,14 @@ color: #BC986A;
 
 #imageprojet1{
 	
-	background-image: url(../media/imagecontact.jpg);
+	background-image: url(../media/imagePPC.jpg);
 	background-size: cover;
 	background-position: center;
 
 }
 #imageprojet2{
 	
-	background-image: url(../media/imagehorloge24.png);
+	background-image: url(../media/jeu_des_paires.png);
 	background-size: cover;
 	background-position: center;
 
@@ -485,7 +505,7 @@ color: #BC986A;
 
 #imageprojet3{
 	
-	background-image: url(../media/imagePPC.jpg);
+	background-image: url(../media/cartes_effets.jpg);
 	background-size: cover;
 	background-position: center;
 
@@ -493,7 +513,7 @@ color: #BC986A;
 
 #imageprojet4{
 	
-	background-image: url(../media/jeuechec.png);
+	background-image: url(../media/Logement.png);
 	background-size: cover;
 	background-position: center;
 	
@@ -501,49 +521,59 @@ color: #BC986A;
 }
 #imageprojet5{
 	
-	background-image: url(../media/trianglerecursive.jpg);
+	background-image: url(../media/app_messagerie.svg);
 	background-size: cover;
 	background-position: center;
 	
 }
-
+/*
 .boutonsprojet{
-	display:flex ;
-	align-items: center;
-	justify-content: space-around ;
-}
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}*/
 
 .deuxboutons{
-	height: 50%;
-	width: 30%;
-	border: none;
-	align-items: center;
-	justify-content: center;
-	color: #659DBD;
-	border-radius: 1em;
-	cursor: pointer; 
-	overflow: hidden;
-    background-color: white;
-    
-    font-size: 60%;      
-    transition: all .5s ease-in-out;
-            
-        
-          
-
-          
-         
-
+  height: 50%;
+  width: 30%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  color: #659DBD;
+  border-radius: 1em;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: white;
+  font-size: 60%;
+  transition: all .5s ease-in-out;
 }
-
 
 .deuxboutons:hover{
-	background-color: #FBEEC1 ;
-	color: black;
-            
-
+  background-color: #FBEEC1;
+  color: black;
 }
 
+/*
+.bouton-github {
+
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bouton-github:hover {
+  background-color: #444;
+}
+
+.lienbouton {
+  display: block;
+  text-align: center;
+}*/
 
 
 
@@ -556,6 +586,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	width: 100vw;
 	height: 30vh;
 	background: rgba(33, 33, 33, 1.0);
@@ -563,14 +594,7 @@ footer {
 
 
 }
-.emballage_pied{
-	display: flex;
-	
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 
-}
 
 
 .lesicones_enbas {
@@ -579,12 +603,28 @@ footer {
 	align-items: center;
 	justify-content: space-around;
 	text-align: center;
-	width: 30vw;
-	height: 5vh;
+
+	width: 60vw;
+	height: 10vh;
 	
 
 }
 
+.icon_pied {
+    display: flex;
+    flex-direction: column; /* Organise l'icône et le texte en colonne */
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Espacement entre l'icône et le texte */
+}
+
+
+.descriptionIconFooter{
+		color: rgb(204,109,61);
+
+
+
+}
 .icon_pied a{
 	
 	font-size: 3em;
@@ -665,19 +705,41 @@ footer {
 	width: 70vw;
 	height: 75vh;
 	margin: auto;
+	padding: 20px; /* Espacement interne pour une meilleure lisibilité */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Ombre pour la profondeur */
+  overflow-y: auto; /* Défilement vertical si le contenu est trop grand */
+  font-size: 1rem; /* Taille de police par défaut */
+  line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
 	animation: pagedescription 0.5s ease-in-out;
 }
+
+#dpactuelle p, #dpactuelle ul {
+  display: block; /* Empile les éléments verticalement */
+  width: 100%; /* Les enfants prennent toute la largeur disponible */
+  margin-bottom: 15px; /* Ajoute un espace entre chaque élément */
+}
+
+#dpactuelle ul {
+  padding-left: 20px; /* Ajoute un espacement pour les puces */
+  list-style-type: disc; /* Assure un style de liste clair */
+}
+
+#dpactuelle ul li {
+  margin-bottom: 5px; /* Espacement entre les items de la liste */
+}
+
 
 @keyframes pagedescription{
 	from {
 
-		transform: scale(0);
+		transform:  scale(0);
 		opacity: 0;
 
 	}
 
 	to {
-		transform: scale(1);
+		transform:  scale(1);
 		opacity: 1;
 
 
@@ -774,6 +836,34 @@ footer {
 		flex-direction: column;
 		
 	}
+
+
+	/* Ajustements pour .descriptionprojet */
+	#dpactuelle {
+		width: 90%; /* Plus flexible sur les écrans moyens */
+		font-size: 0.9rem; /* Police légèrement réduite */
+		padding: 15px; /* Réduction du padding pour éviter les débordements */
+	}
+
+
+.titreprojet{
+	font-size: 1.2rem; /* Ajustement de la taille de police */
+}
+
+
+  /* Media query pour les petits écrans (moins de 480px) */
+@media screen and (max-width: 480px) {
+	#dpactuelle {
+		width: 95%; /* S’étend presque complètement sur la largeur disponible */
+		font-size: 0.8rem; /* Police plus petite pour les écrans très étroits */
+		padding: 10px; /* Ajuste le padding pour maintenir un espacement équilibré */
+	}
+
+	.titreprojet{
+	 font-size: 0.5rem; /* Réduction supplémentaire pour écrans très petits */
+        padding: 10px; /* Réduction des marges internes */
+}
+
 }
 
 
